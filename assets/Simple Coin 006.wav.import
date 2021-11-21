@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Simple Coin 006.wav-f89112ee7b8c74abb6aa11e143429ace.sample"
+
+[deps]
+
+source_file="res://assets/Simple Coin 006.wav"
+dest_files=[ "res://.import/Simple Coin 006.wav-f89112ee7b8c74abb6aa11e143429ace.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

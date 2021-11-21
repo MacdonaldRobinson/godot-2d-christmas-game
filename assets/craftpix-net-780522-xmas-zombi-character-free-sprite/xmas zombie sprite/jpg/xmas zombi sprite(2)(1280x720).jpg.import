@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/xmas zombi sprite(2)(1280x720).jpg-164ee8048cb877259f85d0d9499a29ca.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://assets/craftpix-net-780522-xmas-zombi-character-free-sprite/xmas zombie sprite/jpg/xmas zombi sprite(2)(1280x720).jpg"
+dest_files=[ "res://.import/xmas zombi sprite(2)(1280x720).jpg-164ee8048cb877259f85d0d9499a29ca.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=1
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

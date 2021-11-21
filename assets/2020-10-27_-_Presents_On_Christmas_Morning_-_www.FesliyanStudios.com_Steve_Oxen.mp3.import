@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/2020-10-27_-_Presents_On_Christmas_Morning_-_www.FesliyanStudios.com_Steve_Oxen.mp3-7fd50a7df7c2a7afbd99b924aa7f7912.mp3str"
+
+[deps]
+
+source_file="res://assets/2020-10-27_-_Presents_On_Christmas_Morning_-_www.FesliyanStudios.com_Steve_Oxen.mp3"
+dest_files=[ "res://.import/2020-10-27_-_Presents_On_Christmas_Morning_-_www.FesliyanStudios.com_Steve_Oxen.mp3-7fd50a7df7c2a7afbd99b924aa7f7912.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
