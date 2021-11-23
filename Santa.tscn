@@ -98,6 +98,11 @@ animations = [ {
 "name": "idle",
 "speed": 15.0
 }, {
+"frames": [ ExtResource( 23 ), ExtResource( 30 ), ExtResource( 27 ), ExtResource( 3 ), ExtResource( 55 ), ExtResource( 17 ), ExtResource( 20 ), ExtResource( 40 ), ExtResource( 39 ), ExtResource( 12 ), ExtResource( 4 ), ExtResource( 46 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 60 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "jump",
+"speed": 15.0
+}, {
 "frames": [ ExtResource( 34 ), ExtResource( 32 ), ExtResource( 52 ), ExtResource( 50 ), ExtResource( 13 ), ExtResource( 48 ), ExtResource( 59 ), ExtResource( 45 ), ExtResource( 14 ), ExtResource( 5 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "run",
@@ -106,11 +111,6 @@ animations = [ {
 "frames": [ ExtResource( 85 ), ExtResource( 8 ), ExtResource( 51 ), ExtResource( 6 ), ExtResource( 65 ), ExtResource( 76 ), ExtResource( 47 ), ExtResource( 81 ), ExtResource( 71 ), ExtResource( 19 ), ExtResource( 63 ), ExtResource( 28 ), ExtResource( 56 ), ExtResource( 43 ), ExtResource( 57 ), ExtResource( 33 ), ExtResource( 83 ) ],
 "loop": true,
 "name": "dead",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 23 ), ExtResource( 30 ), ExtResource( 27 ), ExtResource( 3 ), ExtResource( 55 ), ExtResource( 17 ), ExtResource( 20 ), ExtResource( 40 ), ExtResource( 39 ), ExtResource( 12 ), ExtResource( 4 ), ExtResource( 46 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 60 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "jump",
 "speed": 15.0
 }, {
 "frames": [ ExtResource( 44 ), ExtResource( 69 ), ExtResource( 82 ), ExtResource( 75 ), ExtResource( 35 ), ExtResource( 66 ), ExtResource( 49 ), ExtResource( 31 ), ExtResource( 67 ), ExtResource( 77 ), ExtResource( 36 ), ExtResource( 84 ), ExtResource( 78 ) ],
@@ -132,7 +132,7 @@ script = ExtResource( 1 )
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 7
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
