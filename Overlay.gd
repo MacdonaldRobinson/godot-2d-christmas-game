@@ -42,7 +42,7 @@ func reset():
 	game_over_popup.hide()
 	submit_score_panel.show()
 	leader_board_panel.hide()
-	time_left_in_seconds.text = "1"	
+	time_left_in_seconds.text = "30"	
 
 func resume_game():
 	get_tree().paused = false			
