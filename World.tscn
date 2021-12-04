@@ -519,6 +519,7 @@ tile_data = PoolIntArray( -65536, 5, 0, -65535, 4, 0, -65534, 4, 0, -65533, 4, 0
 pause_mode = 2
 stream = ExtResource( 23 )
 volume_db = -15.294
+autoplay = true
 
 [node name="Collect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 28 )
@@ -763,7 +764,7 @@ texture = ExtResource( 30 )
 position = Vector2( 601.912, 556.854 )
 rotation = 1.49478
 frames = SubResource( 25 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/Overlay"]
