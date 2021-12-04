@@ -9,7 +9,7 @@ onready var jameson_assist_popup = $JamesonAssistPopup
 onready var jameson_assist_popup_timer = $JamesonAssistPopup/JamesonAssistPopupTimer
 
 var is_being_assisted = false
-var time_start:int = 30
+var time_start:int = 20
 
 onready var time_left_in_seconds:Label = $HBoxContainer4/TimeLeftInSeconds
 onready var count_down_timer:Timer = $HBoxContainer4/CountDownTimer
@@ -156,7 +156,15 @@ func render_leader_board(json_entries:Array):
 			index = index + 1
 		
 func _on_Submit_pressed():
-	submit_to_leader_board(your_name.text)
+	if your_name.text == "":
+		var window = JavaScript.get_interface("window")
+		
+		if window:
+			var name = window.prompt("Enter your name:")
+			your_name.text = name
+	
+	if your_name.text != "":
+		submit_to_leader_board(your_name.text)
 	
 func _on_GetLeaderBoardRequest_request_completed(result, response_code, headers, body):
 	var json_entries:Array = parse_json(body.get_string_from_utf8())
@@ -169,3 +177,23 @@ func _on_PostLeaderBoardRequest_request_completed(result, response_code, headers
 func _on_KeepPlaying_pressed():
 	resume_game()
 	reset()
+
+
+func _on_Left_button_down():
+	Input.action_press("left")
+
+func _on_Right_button_down():
+	Input.action_press("right")
+
+func _on_Jump_button_down():
+	Input.action_press("jump")
+
+func _on_Left_button_up():
+	Input.action_release("left")
+	
+func _on_Right_button_up():
+	Input.action_release("right")
+
+func _on_Jump_button_up():
+	Input.action_release("jump")
+

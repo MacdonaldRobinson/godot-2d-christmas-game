@@ -519,7 +519,6 @@ tile_data = PoolIntArray( -65536, 5, 0, -65535, 4, 0, -65534, 4, 0, -65533, 4, 0
 pause_mode = 2
 stream = ExtResource( 23 )
 volume_db = -15.294
-autoplay = true
 
 [node name="Collect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 28 )
@@ -572,19 +571,19 @@ texture = ExtResource( 18 )
 
 [node name="Label" type="Label" parent="CanvasLayer/Overlay/HBoxContainer"]
 margin_left = 67.0
-margin_top = 53.0
-margin_right = 81.0
-margin_bottom = 76.0
+margin_top = 41.0
+margin_right = 94.0
+margin_bottom = 88.0
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CandyCount" type="Label" parent="CanvasLayer/Overlay/HBoxContainer"]
-margin_left = 85.0
-margin_top = 53.0
-margin_right = 97.0
-margin_bottom = 76.0
+margin_left = 98.0
+margin_top = 41.0
+margin_right = 122.0
+margin_bottom = 88.0
 text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -607,19 +606,19 @@ texture = ExtResource( 19 )
 
 [node name="Label" type="Label" parent="CanvasLayer/Overlay/HBoxContainer2"]
 margin_left = 132.0
-margin_top = 53.0
-margin_right = 146.0
-margin_bottom = 76.0
+margin_top = 41.0
+margin_right = 159.0
+margin_bottom = 88.0
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="NudeCount" type="Label" parent="CanvasLayer/Overlay/HBoxContainer2"]
-margin_left = 150.0
-margin_top = 53.0
-margin_right = 162.0
-margin_bottom = 76.0
+margin_left = 163.0
+margin_top = 41.0
+margin_right = 187.0
+margin_bottom = 88.0
 text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -645,19 +644,19 @@ stretch_mode = 5
 
 [node name="Label" type="Label" parent="CanvasLayer/Overlay/HBoxContainer3"]
 margin_left = 154.0
-margin_top = 52.0
-margin_right = 168.0
-margin_bottom = 75.0
+margin_top = 40.0
+margin_right = 181.0
+margin_bottom = 87.0
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="JamesonAssistsCount" type="Label" parent="CanvasLayer/Overlay/HBoxContainer3"]
-margin_left = 172.0
-margin_top = 52.0
-margin_right = 184.0
-margin_bottom = 75.0
+margin_left = 185.0
+margin_top = 40.0
+margin_right = 209.0
+margin_bottom = 87.0
 text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -764,7 +763,7 @@ texture = ExtResource( 30 )
 position = Vector2( 601.912, 556.854 )
 rotation = 1.49478
 frames = SubResource( 25 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/Overlay"]
@@ -777,16 +776,14 @@ __meta__ = {
 }
 
 [node name="TimerLeft" type="Label" parent="CanvasLayer/Overlay/HBoxContainer4"]
-margin_top = 12.0
-margin_right = 86.0
-margin_bottom = 35.0
+margin_right = 177.0
+margin_bottom = 47.0
 text = "Time Left:"
 
 [node name="TimeLeftInSeconds" type="Label" parent="CanvasLayer/Overlay/HBoxContainer4"]
-margin_left = 90.0
-margin_top = 12.0
-margin_right = 97.0
-margin_bottom = 35.0
+margin_left = 181.0
+margin_right = 195.0
+margin_bottom = 47.0
 text = "1"
 
 [node name="CountDownTimer" type="Timer" parent="CanvasLayer/Overlay/HBoxContainer4"]
@@ -795,6 +792,7 @@ autostart = true
 
 [node name="GameOver" type="Popup" parent="CanvasLayer/Overlay"]
 visible = true
+modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -818,18 +816,18 @@ __meta__ = {
 }
 
 [node name="KeepPlaying" type="Button" parent="CanvasLayer/Overlay/GameOver/VBoxContainer"]
-margin_left = 834.0
-margin_right = 965.0
-margin_bottom = 29.0
+margin_left = 769.0
+margin_right = 1031.0
+margin_bottom = 53.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Keep Playing"
 
 [node name="SubmitScore" type="VBoxContainer" parent="CanvasLayer/Overlay/GameOver/VBoxContainer"]
-margin_left = 824.0
-margin_top = 162.0
-margin_right = 975.0
-margin_bottom = 259.0
+margin_left = 746.0
+margin_top = 138.0
+margin_right = 1054.0
+margin_bottom = 307.0
 size_flags_horizontal = 4
 size_flags_vertical = 6
 __meta__ = {
@@ -837,29 +835,29 @@ __meta__ = {
 }
 
 [node name="YourNameWrapper" type="VBoxContainer" parent="CanvasLayer/Overlay/GameOver/VBoxContainer/SubmitScore"]
-margin_right = 151.0
-margin_bottom = 60.0
+margin_right = 308.0
+margin_bottom = 108.0
 size_flags_horizontal = 5
 
 [node name="Label" type="Label" parent="CanvasLayer/Overlay/GameOver/VBoxContainer/SubmitScore/YourNameWrapper"]
-margin_right = 151.0
-margin_bottom = 23.0
+margin_right = 308.0
+margin_bottom = 47.0
 text = "Enter You Name:"
 
 [node name="YourName" type="LineEdit" parent="CanvasLayer/Overlay/GameOver/VBoxContainer/SubmitScore/YourNameWrapper"]
-margin_top = 27.0
-margin_right = 151.0
-margin_bottom = 60.0
+margin_top = 51.0
+margin_right = 308.0
+margin_bottom = 108.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Overlay/GameOver/VBoxContainer/SubmitScore"]
-margin_top = 64.0
-margin_right = 151.0
-margin_bottom = 64.0
+margin_top = 112.0
+margin_right = 308.0
+margin_bottom = 112.0
 
 [node name="Submit" type="Button" parent="CanvasLayer/Overlay/GameOver/VBoxContainer/SubmitScore"]
-margin_top = 68.0
-margin_right = 151.0
-margin_bottom = 97.0
+margin_top = 116.0
+margin_right = 308.0
+margin_bottom = 169.0
 text = "Submit"
 
 [node name="LeaderBoardContainer" type="VBoxContainer" parent="CanvasLayer/Overlay/GameOver/VBoxContainer"]
@@ -874,7 +872,7 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="CanvasLayer/Overlay/GameOver/VBoxContainer/LeaderBoardContainer"]
 margin_right = 1800.0
-margin_bottom = 23.0
+margin_bottom = 47.0
 custom_colors/font_color = Color( 1, 0.635294, 0.0117647, 1 )
 text = "Leader Board"
 align = 1
@@ -883,13 +881,13 @@ __meta__ = {
 }
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Overlay/GameOver/VBoxContainer/LeaderBoardContainer"]
-margin_top = 27.0
+margin_top = 51.0
 margin_right = 1800.0
-margin_bottom = 27.0
+margin_bottom = 51.0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Overlay/GameOver/VBoxContainer/LeaderBoardContainer"]
 margin_left = 700.0
-margin_top = 31.0
+margin_top = 55.0
 margin_right = 1100.0
 margin_bottom = 500.0
 rect_min_size = Vector2( 400, 200 )
@@ -900,8 +898,8 @@ __meta__ = {
 }
 
 [node name="LeaderBoard" type="VBoxContainer" parent="CanvasLayer/Overlay/GameOver/VBoxContainer/LeaderBoardContainer/ScrollContainer"]
-margin_right = 400.0
-margin_bottom = 465.0
+margin_right = 388.0
+margin_bottom = 585.0
 size_flags_horizontal = 3
 custom_constants/separation = 20
 __meta__ = {
@@ -911,36 +909,76 @@ __meta__ = {
 [node name="LeaderBoardItem" parent="CanvasLayer/Overlay/GameOver/VBoxContainer/LeaderBoardContainer/ScrollContainer/LeaderBoard" instance=ExtResource( 32 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 400.0
-margin_bottom = 77.0
+margin_right = 388.0
+margin_bottom = 101.0
 
 [node name="LeaderBoardItem2" parent="CanvasLayer/Overlay/GameOver/VBoxContainer/LeaderBoardContainer/ScrollContainer/LeaderBoard" instance=ExtResource( 32 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 97.0
-margin_right = 400.0
-margin_bottom = 174.0
+margin_top = 121.0
+margin_right = 388.0
+margin_bottom = 222.0
 
 [node name="LeaderBoardItem3" parent="CanvasLayer/Overlay/GameOver/VBoxContainer/LeaderBoardContainer/ScrollContainer/LeaderBoard" instance=ExtResource( 32 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 194.0
-margin_right = 400.0
-margin_bottom = 271.0
+margin_top = 242.0
+margin_right = 388.0
+margin_bottom = 343.0
 
 [node name="LeaderBoardItem4" parent="CanvasLayer/Overlay/GameOver/VBoxContainer/LeaderBoardContainer/ScrollContainer/LeaderBoard" instance=ExtResource( 32 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 291.0
-margin_right = 400.0
-margin_bottom = 368.0
+margin_top = 363.0
+margin_right = 388.0
+margin_bottom = 464.0
 
 [node name="LeaderBoardItem5" parent="CanvasLayer/Overlay/GameOver/VBoxContainer/LeaderBoardContainer/ScrollContainer/LeaderBoard" instance=ExtResource( 32 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 388.0
-margin_right = 400.0
-margin_bottom = 465.0
+margin_top = 484.0
+margin_right = 388.0
+margin_bottom = 585.0
+
+[node name="MobileControls" type="Control" parent="CanvasLayer/Overlay"]
+modulate = Color( 1, 1, 1, 0.807843 )
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -112.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Overlay/MobileControls"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Left" type="Button" parent="CanvasLayer/Overlay/MobileControls/HBoxContainer"]
+margin_right = 597.0
+margin_bottom = 112.0
+size_flags_horizontal = 3
+text = "Left"
+
+[node name="Jump" type="Button" parent="CanvasLayer/Overlay/MobileControls/HBoxContainer"]
+margin_left = 601.0
+margin_right = 1198.0
+margin_bottom = 112.0
+size_flags_horizontal = 3
+text = "Jump"
+
+[node name="Right" type="Button" parent="CanvasLayer/Overlay/MobileControls/HBoxContainer"]
+margin_left = 1202.0
+margin_right = 1800.0
+margin_bottom = 112.0
+size_flags_horizontal = 3
+text = "Right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 26 )
@@ -985,6 +1023,12 @@ collect_sound = NodePath("../../JamesonAssist")
 [connection signal="request_completed" from="CanvasLayer/Overlay/GameOver/PostLeaderBoardRequest" to="CanvasLayer/Overlay" method="_on_PostLeaderBoardRequest_request_completed"]
 [connection signal="pressed" from="CanvasLayer/Overlay/GameOver/VBoxContainer/KeepPlaying" to="CanvasLayer/Overlay" method="_on_KeepPlaying_pressed"]
 [connection signal="pressed" from="CanvasLayer/Overlay/GameOver/VBoxContainer/SubmitScore/Submit" to="CanvasLayer/Overlay" method="_on_Submit_pressed"]
+[connection signal="button_down" from="CanvasLayer/Overlay/MobileControls/HBoxContainer/Left" to="CanvasLayer/Overlay" method="_on_Left_button_down"]
+[connection signal="button_up" from="CanvasLayer/Overlay/MobileControls/HBoxContainer/Left" to="CanvasLayer/Overlay" method="_on_Left_button_up"]
+[connection signal="button_down" from="CanvasLayer/Overlay/MobileControls/HBoxContainer/Jump" to="CanvasLayer/Overlay" method="_on_Jump_button_down"]
+[connection signal="button_up" from="CanvasLayer/Overlay/MobileControls/HBoxContainer/Jump" to="CanvasLayer/Overlay" method="_on_Jump_button_up"]
+[connection signal="button_down" from="CanvasLayer/Overlay/MobileControls/HBoxContainer/Right" to="CanvasLayer/Overlay" method="_on_Right_button_down"]
+[connection signal="button_up" from="CanvasLayer/Overlay/MobileControls/HBoxContainer/Right" to="CanvasLayer/Overlay" method="_on_Right_button_up"]
 [connection signal="timeout" from="santa/JamesonAssistTimer" to="CanvasLayer/Overlay" method="_on_JamesonAssistTimer_timeout"]
 [connection signal="timeout" from="santa/JamesonAssistTimer" to="santa" method="_on_JamesonAssistTimer_timeout"]
 [connection signal="timeout" from="gift-emittor/Timer" to="gift-emittor" method="_on_Timer_timeout"]
