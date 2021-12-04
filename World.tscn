@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://assets/WinterTileset/png/BG/BG.png" type="Texture" id=1]
 [ext_resource path="res://assets/WinterTileset/png/Tiles/8.png" type="Texture" id=2]
@@ -32,6 +32,7 @@
 [ext_resource path="res://assets/SantaSprites/png/Idle (1).png" type="Texture" id=30]
 [ext_resource path="res://assets/lightning.png" type="Texture" id=31]
 [ext_resource path="res://LeaderBoardItem.tscn" type="PackedScene" id=32]
+[ext_resource path="res://assets/Fonts/GenghisKhan.otf" type="DynamicFontData" id=33]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
@@ -480,6 +481,13 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="DynamicFont" id=28]
+size = 75
+font_data = ExtResource( 33 )
+
+[sub_resource type="Theme" id=29]
+default_font = SubResource( 28 )
+
 [sub_resource type="SpriteFrames" id=26]
 animations = [ {
 "frames": [  ],
@@ -763,7 +771,7 @@ texture = ExtResource( 30 )
 position = Vector2( 601.912, 556.854 )
 rotation = 1.49478
 frames = SubResource( 25 )
-frame = 7
+frame = 4
 playing = true
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/Overlay"]
@@ -792,7 +800,6 @@ autostart = true
 
 [node name="GameOver" type="Popup" parent="CanvasLayer/Overlay"]
 visible = true
-modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -824,6 +831,7 @@ size_flags_vertical = 0
 text = "Keep Playing"
 
 [node name="SubmitScore" type="VBoxContainer" parent="CanvasLayer/Overlay/GameOver/VBoxContainer"]
+visible = false
 margin_left = 746.0
 margin_top = 138.0
 margin_right = 1054.0
@@ -861,9 +869,9 @@ margin_bottom = 169.0
 text = "Submit"
 
 [node name="LeaderBoardContainer" type="VBoxContainer" parent="CanvasLayer/Overlay/GameOver/VBoxContainer"]
-margin_top = 393.0
+margin_top = 225.0
 margin_right = 1800.0
-margin_bottom = 893.0
+margin_bottom = 725.0
 rect_min_size = Vector2( 0, 500 )
 size_flags_vertical = 6
 __meta__ = {
@@ -872,22 +880,25 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="CanvasLayer/Overlay/GameOver/VBoxContainer/LeaderBoardContainer"]
 margin_right = 1800.0
-margin_bottom = 47.0
+margin_bottom = 69.0
+theme = SubResource( 29 )
 custom_colors/font_color = Color( 1, 0.635294, 0.0117647, 1 )
 text = "Leader Board"
 align = 1
+uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Overlay/GameOver/VBoxContainer/LeaderBoardContainer"]
-margin_top = 51.0
+margin_top = 73.0
 margin_right = 1800.0
-margin_bottom = 51.0
+margin_bottom = 93.0
+rect_min_size = Vector2( 0, 20 )
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Overlay/GameOver/VBoxContainer/LeaderBoardContainer"]
 margin_left = 700.0
-margin_top = 55.0
+margin_top = 97.0
 margin_right = 1100.0
 margin_bottom = 500.0
 rect_min_size = Vector2( 400, 200 )

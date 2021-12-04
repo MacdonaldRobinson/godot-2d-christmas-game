@@ -164,6 +164,7 @@ func _on_Submit_pressed():
 			your_name.text = name
 	
 	if your_name.text != "":
+		var name = your_name.text.to_lower()
 		submit_to_leader_board(your_name.text)
 	
 func _on_GetLeaderBoardRequest_request_completed(result, response_code, headers, body):
