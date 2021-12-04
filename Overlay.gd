@@ -42,7 +42,7 @@ func reset():
 	game_over_popup.hide()
 	submit_score_panel.show()
 	leader_board_panel.hide()
-	time_left_in_seconds.text = "30"	
+	time_left_in_seconds.text = "1"	
 
 func resume_game():
 	get_tree().paused = false			
@@ -161,8 +161,6 @@ func _on_Submit_pressed():
 	submit_to_leader_board(your_name.text)
 	
 func _on_GetLeaderBoardRequest_request_completed(result, response_code, headers, body):
-	print(body.get_string_from_utf8())
-	return
 	var json_entries:Array = parse_json(body.get_string_from_utf8())
 	render_leader_board(json_entries)
 
