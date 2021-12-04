@@ -13,9 +13,27 @@ _global_script_classes=[ {
 "class": "Gift",
 "language": "GDScript",
 "path": "res://gift.gd"
+}, {
+"base": "HBoxContainer",
+"class": "LeaderBoardItem",
+"language": "GDScript",
+"path": "res://LeaderBoardItem.gd"
+}, {
+"base": "Resource",
+"class": "LeaderBoardModel",
+"language": "GDScript",
+"path": "res://LeaderBoardModel.gd"
+}, {
+"base": "VBoxContainer",
+"class": "LeaderBoardStat",
+"language": "GDScript",
+"path": "res://LeaderBoardStat.gd"
 } ]
 _global_script_class_icons={
-"Gift": ""
+"Gift": "",
+"LeaderBoardItem": "",
+"LeaderBoardModel": "",
+"LeaderBoardStat": ""
 }
 
 [application]
@@ -37,7 +55,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/godot-firebase/plugin.cfg", "res://addons/gut/plugin.cfg", "res://addons/rmsmartshape/plugin.cfg" )
+enabled=PoolStringArray(  )
 
 [importer_defaults]
 

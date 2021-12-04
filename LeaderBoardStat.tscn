@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://LeaderBoardStat.gd" type="Script" id=1]
+[ext_resource path="res://assets/Fonts/GenghisKhan.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="LeaderBoardStat" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1800.0
+margin_bottom = -893.0
+theme = SubResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatLabel" type="Label" parent="."]
+margin_right = 47.0
+margin_bottom = 23.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+text = "Label"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatValue" type="Label" parent="."]
+margin_top = 27.0
+margin_right = 47.0
+margin_bottom = 50.0
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
