@@ -9,7 +9,7 @@ onready var jameson_assist_popup = $JamesonAssistPopup
 onready var jameson_assist_popup_timer = $JamesonAssistPopup/JamesonAssistPopupTimer
 
 var is_being_assisted = false
-var time_start:int = 5
+var time_start:int = 30
 
 onready var time_left_in_seconds:Label = $HBoxContainer4/TimeLeftInSeconds
 onready var count_down_timer:Timer = $HBoxContainer4/CountDownTimer
@@ -42,7 +42,7 @@ func reset():
 	game_over_popup.hide()
 	submit_score_panel.show()
 	leader_board_panel.hide()
-	time_left_in_seconds.text = "30"	
+	time_left_in_seconds.text = String(time_start)
 
 func resume_game():
 	get_tree().paused = false			
@@ -97,7 +97,7 @@ func submit_to_leader_board(your_name:String):
 	var headers = []
 	headers.append("content-type: application/json")
 	
-	post_leaderboard_request.request(url, headers, false, HTTPClient.METHOD_POST, data)
+	post_leaderboard_request.request(url, headers, true, HTTPClient.METHOD_POST, data)
 
 func get_entry_from_json(json_entry) -> LeaderBoardModel:
 	var entry:LeaderBoardModel = LeaderBoardModel.new()
