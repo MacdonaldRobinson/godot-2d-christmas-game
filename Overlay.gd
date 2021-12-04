@@ -95,9 +95,7 @@ func submit_to_leader_board(your_name:String):
 	var data = to_json(get_dictionary_entry(new_entry));
 	
 	var headers = []
-	headers.append("content-type: application/json")
-	
-	post_leaderboard_request.request(url, headers, true, HTTPClient.METHOD_POST, data)
+	var result = post_leaderboard_request.request(url, headers, true, HTTPClient.METHOD_POST, data)
 
 func get_entry_from_json(json_entry) -> LeaderBoardModel:
 	var entry:LeaderBoardModel = LeaderBoardModel.new()
