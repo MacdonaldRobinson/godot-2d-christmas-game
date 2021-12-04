@@ -198,3 +198,6 @@ func _on_Right_button_up():
 func _on_Jump_button_up():
 	Input.action_release("jump")
 
+
+func _on_YourName_focus_entered():
+	_on_Submit_pressed()

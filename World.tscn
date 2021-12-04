@@ -771,7 +771,7 @@ texture = ExtResource( 30 )
 position = Vector2( 601.912, 556.854 )
 rotation = 1.49478
 frames = SubResource( 25 )
-frame = 4
+frame = 6
 playing = true
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/Overlay"]
@@ -831,7 +831,6 @@ size_flags_vertical = 0
 text = "Keep Playing"
 
 [node name="SubmitScore" type="VBoxContainer" parent="CanvasLayer/Overlay/GameOver/VBoxContainer"]
-visible = false
 margin_left = 746.0
 margin_top = 138.0
 margin_right = 1054.0
@@ -869,9 +868,9 @@ margin_bottom = 169.0
 text = "Submit"
 
 [node name="LeaderBoardContainer" type="VBoxContainer" parent="CanvasLayer/Overlay/GameOver/VBoxContainer"]
-margin_top = 225.0
+margin_top = 393.0
 margin_right = 1800.0
-margin_bottom = 725.0
+margin_bottom = 893.0
 rect_min_size = Vector2( 0, 500 )
 size_flags_vertical = 6
 __meta__ = {
@@ -1042,6 +1041,7 @@ collect_sound = NodePath("../../JamesonAssist")
 [connection signal="request_completed" from="CanvasLayer/Overlay/GameOver/GetLeaderBoardRequest" to="CanvasLayer/Overlay" method="_on_GetLeaderBoardRequest_request_completed"]
 [connection signal="request_completed" from="CanvasLayer/Overlay/GameOver/PostLeaderBoardRequest" to="CanvasLayer/Overlay" method="_on_PostLeaderBoardRequest_request_completed"]
 [connection signal="pressed" from="CanvasLayer/Overlay/GameOver/VBoxContainer/KeepPlaying" to="CanvasLayer/Overlay" method="_on_KeepPlaying_pressed"]
+[connection signal="focus_entered" from="CanvasLayer/Overlay/GameOver/VBoxContainer/SubmitScore/YourNameWrapper/YourName" to="CanvasLayer/Overlay" method="_on_YourName_focus_entered"]
 [connection signal="pressed" from="CanvasLayer/Overlay/GameOver/VBoxContainer/SubmitScore/Submit" to="CanvasLayer/Overlay" method="_on_Submit_pressed"]
 [connection signal="button_down" from="CanvasLayer/Overlay/MobileControls/HBoxContainer/Left" to="CanvasLayer/Overlay" method="_on_Left_button_down"]
 [connection signal="button_up" from="CanvasLayer/Overlay/MobileControls/HBoxContainer/Left" to="CanvasLayer/Overlay" method="_on_Left_button_up"]
