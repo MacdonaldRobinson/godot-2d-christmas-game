@@ -763,7 +763,7 @@ texture = ExtResource( 30 )
 position = Vector2( 601.912, 556.854 )
 rotation = 1.49478
 frames = SubResource( 25 )
-frame = 7
+frame = 5
 playing = true
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/Overlay"]
@@ -951,34 +951,43 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Overlay/MobileControls"]
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = -130.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Left" type="Button" parent="CanvasLayer/Overlay/MobileControls/HBoxContainer"]
-margin_right = 597.0
-margin_bottom = 112.0
-size_flags_horizontal = 3
+margin_right = 200.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 200, 0 )
 text = "Left"
 
-[node name="Jump" type="Button" parent="CanvasLayer/Overlay/MobileControls/HBoxContainer"]
-margin_left = 601.0
-margin_right = 1198.0
-margin_bottom = 112.0
-size_flags_horizontal = 3
-text = "Jump"
-
 [node name="Right" type="Button" parent="CanvasLayer/Overlay/MobileControls/HBoxContainer"]
-margin_left = 1202.0
-margin_right = 1800.0
-margin_bottom = 112.0
-size_flags_horizontal = 3
+margin_left = 204.0
+margin_right = 404.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 200, 0 )
 text = "Right"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Overlay/MobileControls/HBoxContainer"]
+margin_left = 408.0
+margin_right = 1596.0
+margin_bottom = 130.0
+size_flags_horizontal = 3
+
+[node name="Jump" type="Button" parent="CanvasLayer/Overlay/MobileControls/HBoxContainer"]
+margin_left = 1600.0
+margin_right = 1800.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 0
+text = "Jump"
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 26 )
@@ -1025,10 +1034,10 @@ collect_sound = NodePath("../../JamesonAssist")
 [connection signal="pressed" from="CanvasLayer/Overlay/GameOver/VBoxContainer/SubmitScore/Submit" to="CanvasLayer/Overlay" method="_on_Submit_pressed"]
 [connection signal="button_down" from="CanvasLayer/Overlay/MobileControls/HBoxContainer/Left" to="CanvasLayer/Overlay" method="_on_Left_button_down"]
 [connection signal="button_up" from="CanvasLayer/Overlay/MobileControls/HBoxContainer/Left" to="CanvasLayer/Overlay" method="_on_Left_button_up"]
-[connection signal="button_down" from="CanvasLayer/Overlay/MobileControls/HBoxContainer/Jump" to="CanvasLayer/Overlay" method="_on_Jump_button_down"]
-[connection signal="button_up" from="CanvasLayer/Overlay/MobileControls/HBoxContainer/Jump" to="CanvasLayer/Overlay" method="_on_Jump_button_up"]
 [connection signal="button_down" from="CanvasLayer/Overlay/MobileControls/HBoxContainer/Right" to="CanvasLayer/Overlay" method="_on_Right_button_down"]
 [connection signal="button_up" from="CanvasLayer/Overlay/MobileControls/HBoxContainer/Right" to="CanvasLayer/Overlay" method="_on_Right_button_up"]
+[connection signal="button_down" from="CanvasLayer/Overlay/MobileControls/HBoxContainer/Jump" to="CanvasLayer/Overlay" method="_on_Jump_button_down"]
+[connection signal="button_up" from="CanvasLayer/Overlay/MobileControls/HBoxContainer/Jump" to="CanvasLayer/Overlay" method="_on_Jump_button_up"]
 [connection signal="timeout" from="santa/JamesonAssistTimer" to="CanvasLayer/Overlay" method="_on_JamesonAssistTimer_timeout"]
 [connection signal="timeout" from="santa/JamesonAssistTimer" to="santa" method="_on_JamesonAssistTimer_timeout"]
 [connection signal="timeout" from="gift-emittor/Timer" to="gift-emittor" method="_on_Timer_timeout"]
