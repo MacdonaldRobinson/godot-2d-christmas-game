@@ -524,7 +524,6 @@ format = 1
 tile_data = PoolIntArray( -65536, 5, 0, -65535, 4, 0, -65534, 4, 0, -65533, 4, 0, -65532, 4, 0, -65531, 4, 0, -65530, 4, 0, -65529, 4, 0, -65528, 4, 0, -65527, 4, 0, -65526, 4, 0, -65525, 4, 0, -65524, 4, 0, -65523, 3, 0, 0, 5, 0, 13, 3, 0, 65536, 5, 0, 65549, 3, 0, 131072, 5, 0, 131085, 3, 0, 196608, 5, 0, 196621, 3, 0, 262144, 5, 0, 262157, 3, 0, 327680, 5, 0, 327693, 3, 0, 393216, 9, 0, 393217, 1, 0, 393218, 1, 0, 393219, 1, 0, 393220, 1, 0, 393221, 1, 0, 393222, 1, 0, 393223, 1, 0, 393224, 1, 0, 393225, 1, 0, 393226, 1, 0, 393227, 1, 0, 393228, 1, 0, 393229, 7, 0 )
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
-pause_mode = 2
 stream = ExtResource( 23 )
 volume_db = -15.294
 autoplay = true
@@ -772,7 +771,7 @@ texture = ExtResource( 30 )
 position = Vector2( 601.912, 556.854 )
 rotation = 1.49478
 frames = SubResource( 25 )
-frame = 1
+frame = 5
 playing = true
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/Overlay"]
@@ -866,6 +865,7 @@ margin_bottom = 112.0
 margin_top = 116.0
 margin_right = 308.0
 margin_bottom = 169.0
+disabled = true
 text = "Submit"
 
 [node name="LeaderBoardContainer" type="VBoxContainer" parent="CanvasLayer/Overlay/GameOver/VBoxContainer"]
@@ -1043,6 +1043,8 @@ collect_sound = NodePath("../../JamesonAssist")
 [connection signal="request_completed" from="CanvasLayer/Overlay/GameOver/PostLeaderBoardRequest" to="CanvasLayer/Overlay" method="_on_PostLeaderBoardRequest_request_completed"]
 [connection signal="pressed" from="CanvasLayer/Overlay/GameOver/VBoxContainer/KeepPlaying" to="CanvasLayer/Overlay" method="_on_KeepPlaying_pressed"]
 [connection signal="focus_entered" from="CanvasLayer/Overlay/GameOver/VBoxContainer/SubmitScore/YourNameWrapper/YourName" to="CanvasLayer/Overlay" method="_on_YourName_focus_entered"]
+[connection signal="text_changed" from="CanvasLayer/Overlay/GameOver/VBoxContainer/SubmitScore/YourNameWrapper/YourName" to="CanvasLayer/Overlay" method="_on_YourName_text_changed"]
+[connection signal="text_entered" from="CanvasLayer/Overlay/GameOver/VBoxContainer/SubmitScore/YourNameWrapper/YourName" to="CanvasLayer/Overlay" method="_on_YourName_text_entered"]
 [connection signal="pressed" from="CanvasLayer/Overlay/GameOver/VBoxContainer/SubmitScore/Submit" to="CanvasLayer/Overlay" method="_on_Submit_pressed"]
 [connection signal="button_down" from="CanvasLayer/Overlay/MobileControls/HBoxContainer/Left" to="CanvasLayer/Overlay" method="_on_Left_button_down"]
 [connection signal="button_up" from="CanvasLayer/Overlay/MobileControls/HBoxContainer/Left" to="CanvasLayer/Overlay" method="_on_Left_button_up"]

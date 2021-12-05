@@ -27,6 +27,8 @@ onready var leader_board_panel:VBoxContainer = $GameOver/VBoxContainer/LeaderBoa
 
 var leaderboard_item:PackedScene = preload("res://LeaderBoardItem.tscn")
 
+onready var submit_score_button:Button = $GameOver/VBoxContainer/SubmitScore/Submit
+
 func _ready():
 	reset()
 
@@ -155,17 +157,9 @@ func render_leader_board(json_entries:Array):
 			
 			index = index + 1
 		
-func _on_Submit_pressed():
-	if your_name.text == "":
-		var window = JavaScript.get_interface("window")
-		
-		if window:
-			var name = window.prompt("Enter your name:")
-			your_name.text = name
-	
-	if your_name.text != "":
-		var name = your_name.text.to_lower()
-		submit_to_leader_board(your_name.text)
+func _on_Submit_pressed():	
+		submit_to_leader_board(your_name.text.to_lower())
+		submit_score_button.disabled = true
 	
 func _on_GetLeaderBoardRequest_request_completed(result, response_code, headers, body):
 	var json_entries:Array = parse_json(body.get_string_from_utf8())
@@ -200,4 +194,24 @@ func _on_Jump_button_up():
 
 
 func _on_YourName_focus_entered():
-	_on_Submit_pressed()
+	if your_name.text == "":
+		var window = JavaScript.get_interface("window")
+		
+		if window:
+			var name = window.prompt("Enter your name:")
+			your_name.text = name
+			
+	enable_or_disable_submit_button()
+
+func _on_YourName_text_entered(new_text):
+	enable_or_disable_submit_button()
+
+func _on_YourName_text_changed(new_text):
+	enable_or_disable_submit_button()
+
+func enable_or_disable_submit_button():
+	if your_name.text != "":
+		submit_score_button.disabled = false	
+	else:
+		submit_score_button.disabled = true
+
