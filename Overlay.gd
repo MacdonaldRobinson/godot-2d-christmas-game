@@ -9,7 +9,7 @@ onready var jameson_assist_popup = $JamesonAssistPopup
 onready var jameson_assist_popup_timer = $JamesonAssistPopup/JamesonAssistPopupTimer
 
 var is_being_assisted = false
-var time_start:int = 20
+var time_start:int = 60
 
 onready var time_left_in_seconds:Label = $HBoxContainer4/TimeLeftInSeconds
 onready var count_down_timer:Timer = $HBoxContainer4/CountDownTimer
