@@ -9,7 +9,7 @@ onready var jameson_assist_popup = $JamesonAssistPopup
 onready var jameson_assist_popup_timer = $JamesonAssistPopup/JamesonAssistPopupTimer
 
 var is_being_assisted = false
-var time_start:int = 60
+var time_start:int = 30
 
 onready var time_left_in_seconds:Label = $HBoxContainer4/TimeLeftInSeconds
 onready var count_down_timer:Timer = $HBoxContainer4/CountDownTimer
@@ -28,6 +28,8 @@ onready var leader_board_panel:VBoxContainer = $GameOver/VBoxContainer/LeaderBoa
 var leaderboard_item:PackedScene = preload("res://LeaderBoardItem.tscn")
 
 onready var submit_score_button:Button = $GameOver/VBoxContainer/SubmitScore/Submit
+
+onready var jameson_assist_timer:Timer = $JamesonAssistPopup/JamesonAssistPopupTimer
 
 func _ready():
 	reset()
