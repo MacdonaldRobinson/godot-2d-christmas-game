@@ -652,9 +652,6 @@ margin_left = 1160.54
 margin_top = 11.9233
 margin_right = -430.459
 margin_bottom = 140.923
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Overlay/HBoxContainer3"]
 margin_right = 150.0
@@ -785,7 +782,7 @@ texture = ExtResource( 30 )
 position = Vector2( 601.912, 556.854 )
 rotation = 1.49478
 frames = SubResource( 25 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/Overlay"]
@@ -817,9 +814,6 @@ visible = true
 modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="GetLeaderBoardRequest" type="HTTPRequest" parent="CanvasLayer/Overlay/GameOver"]
 

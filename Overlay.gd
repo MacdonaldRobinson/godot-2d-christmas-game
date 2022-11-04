@@ -19,7 +19,7 @@ onready var your_name:LineEdit = $GameOver/VBoxContainer/SubmitScore/YourNameWra
 onready var get_leaderboard_request = $GameOver/GetLeaderBoardRequest
 onready var post_leaderboard_request = $GameOver/PostLeaderBoardRequest
 
-var webservice_url = "https://maconly.000webhostapp.com/nude-christmas-game.php?method={method}"
+var webservice_url = "http://maconly.atwebpages.com/nude-christmas-game.php?method={method}"
 
 onready var leader_board:VBoxContainer = $GameOver/VBoxContainer/LeaderBoardContainer/ScrollContainer/LeaderBoard
 onready var submit_score_panel:VBoxContainer = $GameOver/VBoxContainer/SubmitScore
