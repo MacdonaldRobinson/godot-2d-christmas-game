@@ -6,6 +6,8 @@ https://macdonaldrobinson.github.io/godot-2d-christmas-game/exports/html/godot-2
 - Ability to collect items
 - Overlay for special / bonus items
 - Overlay for entering your name and loading the leader board
+- Mobile device compatible
+- PWA ( Progressive web app ), allows you to install the app on your mobile device
 
 ## Instructions
-- Arrow key to move and jump
+- Arrow key to move and jump ( button overlay for mobile control )
